@@ -1,0 +1,13 @@
+.blockzone{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width:300px;
+    margin:50px;
+}
+#block{
+    background-color:1px solid black;
+	border: 3px solid black;
+	width : 100px;
+    height: 100px;
+}
+
