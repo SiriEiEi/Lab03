@@ -1,5 +1,5 @@
 /*
-const winning = [
+const WinningCondition = [
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -27,6 +27,7 @@ function TicTacToeGame(){
     }
     /*เงื่อนไขตาการเล่น*/
     function takeTurn(){
+
         if(turn % 2 === 0){
             xplayer.takeTurn();
         }
@@ -38,7 +39,9 @@ function TicTacToeGame(){
 }
 function Gameboard(){
     this.position = Array.from(document.querySelectorAll('.col'));
-
+    this.WinnerCondition=function(){
+        
+    }
 }
 
 function Xplayer(gameboard){
@@ -52,7 +55,9 @@ function Xplayer(gameboard){
 }
 function Yplayer(gameboard){
     this.takeTurn = function(){
-        
+        const availablegamePS = gameboard.position.filter((p) => p.innerText==='');
+        const comPlay = Math.floor(Math.random()*availablegamePS.length);
+        availablegamePS[comPlay].innerText = "O";
     }
 }
 
